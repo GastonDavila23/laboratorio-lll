@@ -71,6 +71,8 @@
 
         //PUNTO4
         Console.WriteLine("Punto 4");
+        double numeroA;
+        double numeroB;
         while(true){
             //Menu
             Console.WriteLine("1. Suma");
@@ -80,24 +82,24 @@
             Console.WriteLine("5. Resto division");
             int eleccion = int.Parse(Console.ReadLine());
             //Verificacion de eleccion
-            if (!eleccion <= 5  || eleccion > 0){
+            if (eleccion > 5  || eleccion <= 0){
                 Console.WriteLine("La opción ingresada no es válida");
                 continue;
             }
             //While para verificar que los numeros ingresados sean doubles
             while(true){
                 Console.WriteLine("Ingrese el primer número decimal:");
-                if (!double.TryParse(Console.ReadLine(), out double numeroA)){
+                if (!double.TryParse(Console.ReadLine(), out numeroA)){
                     Console.WriteLine("No es un número decimal válido.");
                     continue; 
                 }
                 Console.WriteLine("Ingrese el segundo número decimal:");
-                if (!double.TryParse(Console.ReadLine(), out double numeroB))
+                if (!double.TryParse(Console.ReadLine(), out numeroB))
                 {
                     Console.WriteLine("No es un número decimal válido.");
                     continue;
                 }
-                Console.WriteLine("Número A: " + numeroA ", " "Número B: " + numeroB);
+                Console.WriteLine("Número A: " + numeroA + ", " + "Número B: " + numeroB);
                 break;
             }
             //switch case para eleccion
@@ -135,8 +137,78 @@
                 break;
             }
         }
+        //PUNTO5
+        Console.WriteLine("Punto 5"); 
+
+        Console.WriteLine("Ingrese la hora de ingreso: ");
+        int horaIngreso = int.Parse(Console.ReadLine());
+        Console.WriteLine("Ingrese el minuto de ingreso: ");
+        int minutoIngreso = int.Parse(Console.ReadLine());
+        Console.WriteLine("Ingrese la hora de salira: ");
+        int horaSalida = int.Parse(Console.ReadLine());
+        Console.WriteLine("Ingrese el minuto de salida: ");
+        int minutoSalida = int.Parse(Console.ReadLine());
+
+        //Convertir timpo a minutos
+        int ingresoMinutos = horaIngreso* 60 + minutoIngreso;
+        int salidaMinutos = horaIngreso * 60 + minutoSalida;
+
+        //validar hora ingreso no mayor a la salida
+        if (ingresoMinutos >= salidaMinutos){
+            Console.WriteLine("Error: la hora de ingreso no puede ser mayor o igual a la hora de salida");
+            return;
+        }
+
+        //calcular cantidad total minutos trabajados
+        int minutosDiurnos = 0;
+        int minutosNocturnos = 0;
+
+        //verificar y calcular los minutos diurnos y nocturnos
+        for (int i = ingresoMinutos; i < salidaMinutos; i++){
+            int horaActual = (i / 60) % 24; // Convertir los minutos actuales a la hora correspondiente
+
+            if (horaActual >= 8 && horaActual < 20){
+                minutosDiurnos++;
+            }
+            else{
+                minutosNocturnos++;
+            }
+        }
+        //cacular sueldo
+        double salario = minutosDiurnos * (10.0 / 60.0);
+        double salarioNocturno = minutosNocturnos * (10.0 / 60.0);
+        double salarioTotal = salario + salarioNocturno;
+
+        //resultados
+        Console.WriteLine("Minutos trabajados en horario diurno: " + minutosDiurnos);
+        Console.WriteLine("Minutos trabajados en horario nocturno: " + minutosNocturnos);
+        Console.WriteLine("Sueldo total: $" + salarioTotal.ToString("0.00"));
+
+        //PUNTO6
+        Console.WriteLine("Punto 6");
+
+        Console.WriteLine("Ingrese un numero mayor a 1: ");
+        int numeroRecursivo;
+        if(!int.TryParse(Console.ReadLine(), out numeroRecursivo) || numeroRecursivo <= 1){
+            Console.WriteLine("El numero ingresado no es valido.");
+            return;
+        }        
+        
+        multiplicarRecursivo(numeroRecursivo, 1);
+        //PUNTO7
+        /*En C#, se usan varios métodos para manejar cadenas:
+        Length: Obtiene la longitud de la cadena. Ejemplo: "Hola".Length devuelve 4.
+        Contains: Verifica si una subcadena está presente. Ejemplo: "Hola Mundo".Contains("Mundo") devuelve true.
+        IndexOf: Devuelve el índice de la primera aparición de un carácter o subcadena. Ejemplo: "Hola".IndexOf('a') devuelve 3.
+        Remove: Elimina una parte de la cadena. Ejemplo: "Hola".Remove(2) devuelve "Ho".
+        Replace: Reemplaza todas las apariciones de una subcadena. Ejemplo: "Hola".Replace("o", "a") devuelve "Hala".
+        Substring: Extrae una parte de la cadena. Ejemplo: "Hola Mundo".Substring(5, 5) devuelve "Mundo".
+        Append: Se usa con StringBuilder para añadir texto. Ejemplo: sb.Append("Hola").
+        ToUpper: Convierte la cadena a mayúsculas. Ejemplo: "Hola".ToUpper() devuelve "HOLA".
+        ToLower: Convierte la cadena a minúsculas. Ejemplo: "Hola".ToLower() devuelve "hola".
+        */
     }
-          
+  
     //Funcion del punto 3
     static bool esPar(int numero){
             return numero % 2 == 0;
@@ -162,4 +234,18 @@
         double resultado = (a % b);
         return resultado;
     }
+    //Funcion del punto 6
+    static void multiplicarRecursivo(long numero, int iterador){
+        long resultado = numero * numero;
+        Console.WriteLine("Iterador: " + iterador);
+        Console.WriteLine(numero + " * " + numero + " = " + resultado);
+
+        if (resultado > 100000000){
+            Console.WriteLine("Fin recursion");
+            return;
+        }
+
+        multiplicarRecursivo(resultado, iterador + 1);
+    }
+
 }
