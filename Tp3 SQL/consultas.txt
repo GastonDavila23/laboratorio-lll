@@ -40,7 +40,7 @@ SELECT MIN(Population) FROM city;
 INSERT INTO city (Name, CountryCode, District, Population) 
 VALUES ('TUNUYAN', 'ARG', 'Mendoza', 110000);
 
-INSERT INTO country (Name, CountryCode, Capital) 
+INSERT INTO country (Name, Code, Capital) 
 VALUES ('Mendoza', 'MZA', (SELECT ID FROM city WHERE Name = 'TUNUYAN'));
 
 UPDATE city SET Name = 'TUPUNGATO' WHERE Name = 'TUNUYAN';
