@@ -1,0 +1,15 @@
+C:\Users\Hitman\Documents\NetBeansProjects\ProyectoFinalJPA\laboratorio-lll\TPXML\TPXML\bin\Debug\net8.0\TPXML.exe
+C:\Users\Hitman\Documents\NetBeansProjects\ProyectoFinalJPA\laboratorio-lll\TPXML\TPXML\bin\Debug\net8.0\TPXML.deps.json
+C:\Users\Hitman\Documents\NetBeansProjects\ProyectoFinalJPA\laboratorio-lll\TPXML\TPXML\bin\Debug\net8.0\TPXML.runtimeconfig.json
+C:\Users\Hitman\Documents\NetBeansProjects\ProyectoFinalJPA\laboratorio-lll\TPXML\TPXML\bin\Debug\net8.0\TPXML.dll
+C:\Users\Hitman\Documents\NetBeansProjects\ProyectoFinalJPA\laboratorio-lll\TPXML\TPXML\bin\Debug\net8.0\TPXML.pdb
+C:\Users\Hitman\Documents\NetBeansProjects\ProyectoFinalJPA\laboratorio-lll\TPXML\TPXML\obj\Debug\net8.0\TPXML.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hitman\Documents\NetBeansProjects\ProyectoFinalJPA\laboratorio-lll\TPXML\TPXML\obj\Debug\net8.0\TPXML.AssemblyInfoInputs.cache
+C:\Users\Hitman\Documents\NetBeansProjects\ProyectoFinalJPA\laboratorio-lll\TPXML\TPXML\obj\Debug\net8.0\TPXML.AssemblyInfo.cs
+C:\Users\Hitman\Documents\NetBeansProjects\ProyectoFinalJPA\laboratorio-lll\TPXML\TPXML\obj\Debug\net8.0\TPXML.csproj.CoreCompileInputs.cache
+C:\Users\Hitman\Documents\NetBeansProjects\ProyectoFinalJPA\laboratorio-lll\TPXML\TPXML\obj\Debug\net8.0\TPXML.sourcelink.json
+C:\Users\Hitman\Documents\NetBeansProjects\ProyectoFinalJPA\laboratorio-lll\TPXML\TPXML\obj\Debug\net8.0\TPXML.dll
+C:\Users\Hitman\Documents\NetBeansProjects\ProyectoFinalJPA\laboratorio-lll\TPXML\TPXML\obj\Debug\net8.0\refint\TPXML.dll
+C:\Users\Hitman\Documents\NetBeansProjects\ProyectoFinalJPA\laboratorio-lll\TPXML\TPXML\obj\Debug\net8.0\TPXML.pdb
+C:\Users\Hitman\Documents\NetBeansProjects\ProyectoFinalJPA\laboratorio-lll\TPXML\TPXML\obj\Debug\net8.0\TPXML.genruntimeconfig.cache
+C:\Users\Hitman\Documents\NetBeansProjects\ProyectoFinalJPA\laboratorio-lll\TPXML\TPXML\obj\Debug\net8.0\ref\TPXML.dll
